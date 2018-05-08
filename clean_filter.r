@@ -2,17 +2,19 @@
 #None-summary (per-box) data
 
 
+#experiment 1 was the pilot study
+#experiment 2 was the official study
+
 clean_filter<-function(folderToStore, experiment){
   #Import
-  #setwd('~/Documents/labwork/crowdsource/')
   if (experiment==2){
-    master<-read.csv('~/Documents/labwork/crowdsource/20161215/20161215-selected/d3ai_tassels_mturk_masters_20161205_qualtrics_survey_responses.csv')
-    turk<-read.csv('~/Documents/labwork/crowdsource/20161215/20161215-selected/d3ai_tassels_mturk_20161205_qualtrics_survey_responses.csv')
-    sona<-read.csv('~/Documents/labwork/crowdsource/20161215/20161215-selected/d3ai_tassels_sona_20161202_qualtrics_survey_responses.csv')
+    master<-read.csv('./rawdata/20161215-selected/d3ai_tassels_mturk_masters_20161205_qualtrics_survey_responses.csv')
+    turk<-read.csv('./rawdata/20161215-selected/d3ai_tassels_mturk_20161205_qualtrics_survey_responses.csv')
+    sona<-read.csv('./rawdata/20161215-selected/d3ai_tassels_sona_20161202_qualtrics_survey_responses.csv')
     rawdata = rbind(rbind(master,turk),sona)
   }
   else if (experiment==1){
-    rawdata = read.csv('~/Documents/labwork/crowdsource/20160928/d3ai_response_data_row_per_user_box_20160928.csv')
+    rawdata = read.csv('./pilotdata/d3ai_response_data_row_per_user_box_20160928.csv')
   }
   #This filters out all incomplete users
   if (experiment==1){
