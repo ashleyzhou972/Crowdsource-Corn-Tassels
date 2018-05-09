@@ -66,6 +66,7 @@ plot(per_user_image$question.ordinal,per_user_image$logtime,col="#00000033"
      ,pch=20,xlab="Question Ordinal Index", ylab="Time per Question in log scale")
 #plot(timepred$question_ordinal,timepred$Pred,col="red",pch=16)
 cols = brewer.pal(3,"Dark2")
+#Results are from SAS outputs
 #Master
 abline(3.8522,-0.01043,col=cols[1],lwd=3)
 #Turker
@@ -82,6 +83,7 @@ legend('topleft',col=brewer.pal(3,'Dark2'),
 plot(per_user_image$question.ordinal,per_user_image$fmean,ylim=c(0,1),col="#00000033",pch=20,xlab = 'Question Ordinal Index',
      ylab = 'Mean F-value')
 cols = brewer.pal(3,"Dark2")
+#Results are from SAS outputs
 #Master pvalue=0.0457
 abline(0.7909,-0.00008,col=cols[1],lwd=3)
 #Turker pvalue<0.0001
@@ -95,6 +97,7 @@ legend('bottomleft',col=brewer.pal(3,'Dark2'),legend = c("Master MTurk","non-Mas
 plot(per_user_image$logtime,per_user_image$fmean,
      xlab = 'Time Spent per Question in Log Scale',ylab='Fmean',
      col="#00000033",pch=20)
+#Results are from SAS outputs
 #master pvalue<0.0001
 abline(0.7669,0.006090,col=cols[1],lwd=3)
 #turker pvalue <0.0001
